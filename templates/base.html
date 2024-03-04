@@ -29,20 +29,29 @@
           <a class="submitbutton" href="../logout/"><button>Logout</button></a>        
       </div>
     </div>
-    <div class="container">
+    <div class="container-1">
       <div class="header">
         <h2>Revive your Retro memories with a single click</h2>
       </div>
     </div>
+    <div>
      <div class="cards">
-      <div class="container header">
-        <img width="400" height="400" src="{% static 'assets/2.png' %}" class="model-img" alt="photo">
-        <h3>Revive Picture</h3>
+      <div class="header model-card">
+        <div class="container">
+          <h2>Revive Picture</h2>
+          <img width="350" height="350" src="{% static 'assets/2.png' %}" class="model-img" alt="photo">
+          <a href="../logout/"><button class="btn">COLORIZE PHOTO</button></a>    
       </div>
-      <div class="container header">
-        <h3>Revive Video</h3>
+      </div>
+      <div class="header model-card">
+        <div class="container">
+          <h2>Revive Video</h2>
+          <img width="350" height="350" src="{% static 'assets/2.png' %}" class="model-img" alt="photo">
+          <a href="../logout/"><button class="btn">COLORIZE VIDEO</button></a>    
+      </div>
       </div>
      </div>
+    </div>
      {% endif %}
      {% block content %}
     {% endblock content %}
