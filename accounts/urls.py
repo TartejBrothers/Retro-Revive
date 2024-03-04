@@ -7,8 +7,8 @@ urlpatterns = [
     # Path for registering a customer
     path("signup/", views.register_customer, name="register-customer"),
     # Path for user login
-    path("", views.login_user, name="login"),
+    path("login/", views.login_user, name="login"),
     # Path for user logout
     path("logout/", views.logout_user, name="logout"),
-    path("home/", views.home, name="home"),
+    path("",views.home , name="home")
 ]

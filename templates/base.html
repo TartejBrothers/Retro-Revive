@@ -4,13 +4,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diagno Test</title>
+    <title>Retro Revive</title>
     <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
-    <link rel="icon" href="{% static 'images/favicon.ico' %}" />
+    <link rel="icon" href="{% static 'assets/favicon.ico' %}" />
   </head>
   <body>
     <div class="navbar">
-      <div class="navleft"><p>Diagno Test</p></div>
+      <div class="navleft"><p>Retro Revive</p></div>
       <div class="navright">
         <a href="../logout">
           {% if request.user.is_authenticated %}
@@ -26,29 +26,25 @@
               {{ request.user.email }}
             </a>
           </li>
-          {% endif %}
-          <a href="../logout/"><button>Logout</button></a>
-        
+          <a class="submitbutton" href="../logout/"><button>Logout</button></a>        
       </div>
     </div>
     <div class="container">
       <div class="header">
-        <p>Diagnose your disease with a single click</p>
-      </div>
-      <div class="options">
-        <a href="../brain/"><h3>Brain Tumour</h3></a>
-      </div>
-
-      <div class="options">
-        <a href="../pneumonia"><h3>Pneumonia Predictor</h3></a>
-      </div>
-      <div class="options">
-        <a
-          href="https://www.google.com/maps/search/?api=1&query=medical+labs"
-          target="_blank"
-          ><h3>Find Closest Medical Labs</h3></a
-        >
+        <h2>Revive your Retro memories with a single click</h2>
       </div>
     </div>
+     <div class="cards">
+      <div class="container header">
+        <img width="400" height="400" src="{% static 'assets/2.png' %}" class="model-img" alt="photo">
+        <h3>Revive Picture</h3>
+      </div>
+      <div class="container header">
+        <h3>Revive Video</h3>
+      </div>
+     </div>
+     {% endif %}
+     {% block content %}
+    {% endblock content %}
   </body>
 </html>
