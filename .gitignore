@@ -103,7 +103,7 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
-
+*.caffemodel
 # Translations
 *.mo
 *.pot
