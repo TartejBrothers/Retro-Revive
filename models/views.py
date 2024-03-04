@@ -11,6 +11,7 @@ import numpy as np
 from skimage.io import imsave
 from skimage import img_as_ubyte
 from skimage.color import rgb2lab, lab2rgb, rgb2gray
+from django.http import JsonResponse
 
 
 class CustomFileSystemStorage(FileSystemStorage):
@@ -23,6 +24,16 @@ def index(request):
     fss = CustomFileSystemStorage()
 
     try:
+        media_root = settings.MEDIA_ROOT
+        for filename in os.listdir(media_root):
+            file_path = os.path.join(media_root, filename)
+            try:
+                if os.path.isfile(file_path):
+                    os.unlink(file_path)
+            except Exception as e:
+                return JsonResponse(
+                    {"error": f"Failed to delete {filename}: {str(e)}"}, status=500
+                )
         prototxt_path = os.path.join(
             settings.BASE_DIR, "requirements", "colorization_deploy_v2.prototxt"
         )
