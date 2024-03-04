@@ -12,14 +12,14 @@ html {
 body {
   display: flex;
   background-color: #1d1d1d;
-  background: url("../images/bg.png") no-repeat center center/cover;
+  background: url("../assets/bg.png") no-repeat center center/cover;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
 .header h1 {
-  color: #ee804d;
+  color: #f5f5f7;
   margin: 20px 20px 10px 20px;
   text-align: center;
 }
@@ -42,8 +42,8 @@ body {
   font-weight: 600;
 }
 .navright button {
-  background-color: #ee804d;
-  color: #ffffff;
+  background-color: #fefefe;
+  color: #000000;
   padding: 10px 20px;
   border-radius: 10px;
   border: none;
@@ -95,8 +95,8 @@ input[type="file"]::file-selector-button {
 }
 
 .compress_image {
-  background-color: #4caf50;
-  color: white;
+  background-color: #fefefe;
+  color: rgb(0, 0, 0);
   border: none;
   padding: 10px 20px;
   text-align: center;
@@ -108,7 +108,7 @@ input[type="file"]::file-selector-button {
 }
 
 .compress_image:hover {
-  background-color: #45a049;
+  background-color: #f5f5f7;
 }
 
 .status {
@@ -122,7 +122,7 @@ input[type="file"]::file-selector-button {
 .info_container {
   display: flex;
   flex-direction: column;
-  color: #fadf63;
+  color: #c2c2c2;
   font-size: 20px;
   margin-top: 20px;
 }
