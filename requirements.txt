@@ -1,8 +1,16 @@
 asgiref==3.7.2
 Django==5.0.2
 django-widget-tweaks==1.5.0
+imageio==2.34.0
+lazy_loader==0.3
+networkx==3.2.1
 numpy==1.26.4
 opencv-python==4.9.0.80
+packaging==23.2
+pillow==10.2.0
 psycopg2-binary==2.9.9
+scikit-image==0.22.0
+scipy==1.12.0
 sqlparse==0.4.4
-
+tailwind==3.1.5b0
+tifffile==2024.2.12

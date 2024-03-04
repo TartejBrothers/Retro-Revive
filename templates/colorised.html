@@ -1,51 +1,56 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Colorized Image</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Diagno-Test</title>
+    <!-- <link rel="stylesheet" href="{% static 'css/global.css' %}" /> -->
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" />
   </head>
+
   <body>
-    <h1>Colorized Image</h1>
-    <form id="uploadForm" enctype="multipart/form-data">
+    <div class="navbar">
+      <div class="navleft"><p>Diagno Test</p></div>
+      <div class="navright">
+        <a href="../home"><button>Home</button></a>
+      </div>
+    </div>
+    <div class="header">
+      <h1><span>Diagno Test</span></h1>
+      <p>Brain Tumour Detector</p>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data">
       {% csrf_token %}
-      <input type="file" name="image" />
-      <button type="submit">Upload</button>
+      <input
+        class="custom-file-upload"
+        type="file"
+        accept="image"
+        name="image"
+        id="file"
+      />
+      <button class="compress_image" type="submit" id="submitBtn">
+        Colorise
+      </button>
+      <div class="status">
+        <p id="message">{{ message }}</p>
+      </div>
     </form>
-    <h2>Original Image:</h2>
-    <img
-      id="originalImage"
-      src="{{ original_image_url }}"
-      alt="Original Image"
-    />
-    <div id="colorizedImageContainer"></div>
 
-    <script>
-      $(document).ready(function () {
-        $("#uploadForm").submit(function (e) {
-          e.preventDefault(); // Prevent form submission
-          var formData = new FormData(this);
+    <div class="wrapper">
+      <img
+        class="wrapperimg"
+        src="{% if image_url %}{{ image_url }}{% else %}{% static 'images/noimage.jpg' %}{% endif %}"
+      />
 
-          $.ajax({
-            type: "POST",
-            url: window.location.href,
-            data: formData,
-            processData: false,
-            contentType: false,
-            success: function (data) {
-              $("#colorizedImageContainer").html(
-                '<h2>Colorized Image:</h2><img src="' +
-                  data.colorized_image_url +
-                  '" alt="Colorized Image">'
-              );
-            },
-            error: function (xhr, status, error) {
-              console.error(xhr.responseText);
-            },
-          });
-        });
-      });
-    </script>
+      <!-- Display the result image -->
+      <img
+        class="resultimg"
+        src="{% if result_image_url %}{{ result_image_url }}{% endif %}"
+      />
+    </div>
   </body>
 </html>
