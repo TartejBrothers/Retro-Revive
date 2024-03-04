@@ -1,4 +1,5 @@
 {% load static %}
+{% if request.user.is_authenticated %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +16,7 @@
     <div class="navbar">
       <div class="navleft"><p>Retro Revive</p></div>
       <div class="navright">
-        <a href="../home"><button>Home</button></a>
+        <a href="../"><button>Home</button></a>
       </div>
     </div>
     <div class="header">
@@ -54,3 +55,4 @@
     </div>
   </body>
 </html>
+{% endif %}
