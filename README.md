@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="" rel="noopener">
- <img src="/Hacktrix_Logo.svg" alt="Project logo"></a>
+ <img src="static/assets/favicon.ico" alt="Project logo"></a>
 </p>
 <h3 align="center">RetroRevive</h3>
 
@@ -50,3 +50,7 @@ Our machine learning model for colorization:
 - Convolutional Neural Networks (CNNs)
 - Generative Adversarial Networks (GANs)
 - Image and video datasets for training and validation
+
+## Working Example
+
+- [Retro Revive Working](https://drive.google.com/file/d/1bKmZYZhf2wU8RjcAMGequAcwILHvdu1X/view?usp=sharing)
