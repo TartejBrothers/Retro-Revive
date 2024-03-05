@@ -107,7 +107,7 @@ cover/
 # Translations
 *.mo
 *.pot
-*.caffemodel
+
 # Django stuff:
 *.log
 local_settings.py
