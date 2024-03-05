@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Retro Revive</title>
+    <link rel="stylesheet" href="{% static 'css/video.css' %}" />
     <link rel="stylesheet" href="{% static 'css/home.css' %}" />
     <link rel="icon" href="{% static 'assets/favicon.ico' %}" />
   </head>
@@ -39,9 +40,9 @@
       </div>
     </form>
 
-    <div class="wrapper">
+    <div class="wrapper-video">
       <!-- Display the uploaded video -->
-      <video class="video" controls>
+      <video class="result-video" controls>
         <source
           src="{% if video_url %}{{ video_url }}{% endif %}"
           type="video/mp4"
