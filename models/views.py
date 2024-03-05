@@ -165,10 +165,21 @@ def video(request):
         result_video_url = os.path.join(settings.MEDIA_URL, "output_video.mp4")
 
         print("Output Video Path:", result_video_url)
-
+        
+        media_root = os.path.join(settings.BASE_DIR, "output_frames")
+        for filename in os.listdir(media_root):
+            file_path = os.path.join(media_root, filename)
+            try:
+                if os.path.isfile(file_path):
+                    os.unlink(file_path)
+            except Exception as e:
+                return JsonResponse(
+                    {"error": f"Failed to delete {filename}: {str(e)}"}, status=500
+                )
+        
         return TemplateResponse(
             request,
-            "colorisedvideo.html",
+            "colorised-video.html",
             {
                 "message": message,
                 "video_url": video_url,
@@ -177,10 +188,10 @@ def video(request):
         )
     except MultiValueDictKeyError:
         return TemplateResponse(
-            request, "colorisedvideo.html", {"message": "No Video Selected"}
+            request, "colorised-video.html", {"message": "No Video Selected"}
         )
     except Exception as e:
-        return TemplateResponse(request, "colorisedvideo.html", {"message": str(e)})
+        return TemplateResponse(request, "colorised-video.html", {"message": str(e)})
 
 
 def split_video_frames(video_path, output_folder):

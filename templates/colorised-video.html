@@ -1,4 +1,5 @@
-{% load static %} {% if request.user.is_authenticated %}
+{% load static %}
+{% if request.user.is_authenticated %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Retro Revive</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}" />
-    <link rel="icon" href="{% static 'images/favicon.ico' %}" />
+    <link rel="icon" href="{% static 'assets/favicon.ico' %}" />
   </head>
   <body>
     <div class="navbar">

@@ -26,7 +26,7 @@ urlpatterns = [
     path("", include("accounts.urls")),
     path("admin/", admin.site.urls),
     path("colorised/", index, name="colorised"),
-    path("video/", video, name="video"),
+    path("colorised-video/", video, name="video"),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
