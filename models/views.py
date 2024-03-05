@@ -109,10 +109,20 @@ def index(request):
 
 def video(request):
     message = ""
-    fss = CustomFileSystemStorage()
+    fss = FileSystemStorage()
 
     try:
         media_root = settings.MEDIA_ROOT
+        for filename in os.listdir(media_root):
+            file_path = os.path.join(media_root, filename)
+            try:
+                if os.path.isfile(file_path):
+                    os.unlink(file_path)
+            except Exception as e:
+                return JsonResponse(
+                    {"error": f"Failed to delete {filename}: {str(e)}"}, status=500
+                )
+        media_root = os.path.join(settings.BASE_DIR, "output_frames")
         for filename in os.listdir(media_root):
             file_path = os.path.join(media_root, filename)
             try:
@@ -130,35 +140,39 @@ def video(request):
             settings.BASE_DIR, "requirements", "colorization_release_v2.caffemodel"
         )
         kernel_path = os.path.join(settings.BASE_DIR, "requirements", "pts_in_hull.npy")
-        output_folder = os.path.join(settings.BASE_DIR, "output")
+        output_folder = os.path.join(settings.BASE_DIR, "media")
 
         video = request.FILES["video"]
         video_path = fss.save(video.name, video)
         video_full_path = os.path.join(settings.MEDIA_ROOT, video_path)
 
         output_frames_folder = os.path.join(settings.BASE_DIR, "output_frames")
-        output_video_path = os.path.join(settings.BASE_DIR, "output_video")
+        output_video_path = os.path.join(settings.MEDIA_ROOT)
 
         split_video_frames(video_full_path, output_frames_folder)
         generate_video(
             output_frames_folder,
-            output_video_path,
+            output_folder,
             video_full_path,
             prototxt_path,
             model_path,
             kernel_path,
         )
 
-        print("Output Video Path:", output_video_path)
-        print("Output Frames Folder:", output_frames_folder)
+        # Construct the video URLs
+        video_url = fss.url(video_path)
+
+        result_video_url = os.path.join(settings.MEDIA_URL, "output_video.mp4")
+
+        print("Output Video Path:", result_video_url)
 
         return TemplateResponse(
             request,
             "colorisedvideo.html",
             {
                 "message": message,
-                "video_url": fss.url(video_path),
-                "result_video_url": fss.url(output_video_path + ".mp4"),
+                "video_url": video_url,
+                "result_video_url": result_video_url,
             },
         )
     except MultiValueDictKeyError:
@@ -191,7 +205,7 @@ def split_video_frames(video_path, output_folder):
 
 def generate_video(
     image_folder,
-    output_video_path,
+    output_folder,  # Change the output_folder parameter name
     input_video_path,
     prototxt_path,
     model_path,
@@ -212,8 +226,11 @@ def generate_video(
     frame = cv2.imread(os.path.join(image_folder, images[0]))
     height, width, _ = frame.shape
 
+    # Change the output_video_path to use the output_folder
+    output_video_path = os.path.join(output_folder, "output_video.mp4")
+
     fourcc = cv2.VideoWriter_fourcc(*"avc1")  # Specify the codec (H.264)
-    video = cv2.VideoWriter(output_video_path + ".mp4", fourcc, 30.0, (width, height))
+    video = cv2.VideoWriter(output_video_path, fourcc, 30.0, (width, height))
 
     net = cv2.dnn.readNetFromCaffe(prototxt_path, model_path)
     points = np.load(kernel_path)
