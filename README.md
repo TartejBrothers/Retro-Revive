@@ -1,13 +1,18 @@
 # NoirInsight
-<h3 align="center">PPT PRESENTATION</h3>
-<p align="center">
-  https://docs.google.com/presentation/d/10juHK59FMRPHdhp8T9TkTh-aAFeU1l5bgc6aStm2Pvg/edit?usp=sharing
-</p>
 <p align="center">
   <a href="" rel="noopener">
  <img src="static/assets/favicon.ico" alt="Project logo"></a>
 </p>
 <h1 align="center">RetroRevive</h3>
+
+<h3 align="center">PPT PRESENTATION</h3>
+<p align="center">
+  https://docs.google.com/presentation/d/10juHK59FMRPHdhp8T9TkTh-aAFeU1l5bgc6aStm2Pvg/edit?usp=sharing
+</p>
+<h3 align="center">Working Example</h3>
+<p align="center">
+  https://drive.google.com/file/d/1bKmZYZhf2wU8RjcAMGequAcwILHvdu1X/view?usp=sharing
+</p>
 
 ---
 
@@ -54,6 +59,3 @@ Our machine learning model for colorization:
 - Generative Adversarial Networks (GANs)
 - Image and video datasets for training and validation
 
-## Working Example
-
-- [Retro Revive Working](https://drive.google.com/file/d/1bKmZYZhf2wU8RjcAMGequAcwILHvdu1X/view?usp=sharing)
