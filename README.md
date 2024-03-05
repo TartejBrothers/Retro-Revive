@@ -1,10 +1,13 @@
 # NoirInsight
-
+<h3 align="center">PPT PRESENTATION</h3>
+<p align="center">
+  https://docs.google.com/presentation/d/10juHK59FMRPHdhp8T9TkTh-aAFeU1l5bgc6aStm2Pvg/edit?usp=sharing
+</p>
 <p align="center">
   <a href="" rel="noopener">
  <img src="static/assets/favicon.ico" alt="Project logo"></a>
 </p>
-<h3 align="center">RetroRevive</h3>
+<h1 align="center">RetroRevive</h3>
 
 ---
 
