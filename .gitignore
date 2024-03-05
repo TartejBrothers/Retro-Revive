@@ -27,8 +27,9 @@ creds.js
 *.csv.gz
 *.tsv
 *.tsv.gz
+*.tsv.gz
 *.xlsx
-*.h5
+
 *.pkl
 # Mac/OSX
 
@@ -103,11 +104,10 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
-*.caffemodel
 # Translations
 *.mo
 *.pot
-
+*.caffemodel
 # Django stuff:
 *.log
 local_settings.py
@@ -192,5 +192,3 @@ dmypy.json
 cython_debug/
 
 # Dataset
-/lung-segmentation/MontgomerySet
-lung-segmentation/files
