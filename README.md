@@ -72,3 +72,4 @@ Our machine learning model for colorization:
 - [Devesh Patel](https://github.com/devesh711)
 - [Achintya Gupta](https://github.com/AchintyaGupta2763)
 - [Abhinav Singh](https://github.com/Nopropernick)
+- [Shaurya Awasthi](https://github.com/Shaurya200401)
