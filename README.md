@@ -1,4 +1,5 @@
 # NoirInsight
+
 <p align="center">
   <a href="" rel="noopener">
  <img src="static/assets/favicon.ico" alt="Project logo"></a>
@@ -14,8 +15,8 @@
 
 https://github.com/TartejBrothers/Retro-Revive/assets/113835041/3d5cfd92-2605-487f-9d25-63fe03146358
 
+https://drive.google.com/file/d/1bKmZYZhf2wU8RjcAMGequAcwILHvdu1X/view?usp=sharing
 
-  https://drive.google.com/file/d/1bKmZYZhf2wU8RjcAMGequAcwILHvdu1X/view?usp=sharing
 </div>
 
 ---
@@ -28,6 +29,8 @@ https://github.com/TartejBrothers/Retro-Revive/assets/113835041/3d5cfd92-2605-48
 - [Problem Statement](#problem_statement)
 - [Idea / Solution](#idea)
 - [Future Scope](#future_scope)
+- [Built With](#tech_stack)
+- [Collaborators](#collaborators)
 
 ## 🧐 Problem Statement <a name = "problem_statement"></a>
 
@@ -63,3 +66,10 @@ Our machine learning model for colorization:
 - Generative Adversarial Networks (GANs)
 - Image and video datasets for training and validation
 
+## 🧑🏼‍💻 Collaborators <a name = "collaborators"></a>
+
+- [Taranjeet Singh Bedi](https://github.com/TartejBrothers)
+- [Devesh Patel](https://github.com/devesh711)
+- [Achintya Gupta](https://github.com/AchintyaGupta2763)
+- [Abhinav Singh](https://github.com/Nopropernick)
+- [Shaurya Awasthi](https://github.com/Shaurya200401)
