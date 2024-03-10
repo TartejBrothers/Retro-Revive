@@ -67,9 +67,5 @@ Our machine learning model for colorization:
 - Image and video datasets for training and validation
 
 ## 🧑🏼‍💻 Collaborators <a name = "collaborators"></a>
-
-- [Taranjeet Singh Bedi](https://github.com/TartejBrothers)
-- [Devesh Patel](https://github.com/devesh711)
-- [Achintya Gupta](https://github.com/AchintyaGupta2763)
-- [Abhinav Singh](https://github.com/Nopropernick)
-- [Shaurya Awasthi](https://github.com/Shaurya200401)
+| <p align="center">![Taranjeet Singh Bedi](https://github.com/TartejBrothers.png?size=128)<br>[Achintya Gupta](https://github.com/TartejBrothers)</p> | <p align="center">![Devesh Patel](https://github.com/devesh711.png?size=128)<br>[Devesh Patel](https://github.com/devesh711)</p> | <p align="center">![Achintya Gupta](https://github.com/AchintyaGupta2763.png?size=128)<br>[Achintya Gupta](https://github.com/AchintyaGupta2763)</p> | <p align="center">![Abhinav Singh](https://github.com/Nopropernick.png?size=128)<br>[Abhinav Singh](https://github.com/Nopropernick)</p> | <p align="center">![Shaurya Awasthi](https://github.com/Shaurya200401.png?size=128)<br>[Shaurya Awasthi](https://github.com/Shaurya200401)</p> |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
