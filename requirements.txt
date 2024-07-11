@@ -15,3 +15,4 @@ scipy==1.12.0
 sqlparse==0.5.0
 tailwind==3.1.5b0
 tifffile==2024.2.12
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
